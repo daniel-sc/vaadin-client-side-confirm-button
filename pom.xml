@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.daniel_sc</groupId>
     <artifactId>client-side-confirm-button</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
     <description>Provides a button that shows a client side confirmation overlay 
     	to have the user confirm the button click without any server interaction.</description>
     <packaging>bundle</packaging>
@@ -25,7 +25,7 @@
         <url>git://github.com/daniel-sc/vaadin-client-side-confirm-button.git</url>
         <connection>scm:git:git://github.com/daniel-sc/vaadin-client-side-confirm-buttonn.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/daniel-sc/vaadin-client-side-confirm-button.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>client-side-confirm-button-0.1.1</tag>
   </scm>
     <issueManagement>
         <system>GitHub</system>
