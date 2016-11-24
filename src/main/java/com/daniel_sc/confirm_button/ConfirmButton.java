@@ -44,9 +44,38 @@ public class ConfirmButton extends Button {
         setResource(ConfirmButtonState.CANCEL_ICON, icon);
     }
 
+    public void setConfirmQuestion(String question) {
+        getState().confirmQuestion = question;
+    }
+
+    public String getConfirmQuestion() {
+        return getState(false).confirmQuestion;
+    }
+
+    public void setCancelText(String text) {
+        getState().cancelText = text;
+    }
+
+    public String getCancelText() {
+        return getState(false).cancelText;
+    }
+
+    public void setConfirmText(String text) {
+        getState().confirmText = text;
+    }
+
+    public String getConfirmText() {
+        return getState(false).confirmText;
+    }
+
     @Override
     protected ConfirmButtonState getState() {
         return (ConfirmButtonState) super.getState();
+    }
+
+    @Override
+    protected ConfirmButtonState getState(boolean markAsDirty) {
+        return (ConfirmButtonState) super.getState(markAsDirty);
     }
 
 }

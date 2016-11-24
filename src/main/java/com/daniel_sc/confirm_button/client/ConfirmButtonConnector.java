@@ -80,7 +80,8 @@ public class ConfirmButtonConnector extends ButtonConnector {
             @Override
             public void setPosition(int offsetWidth, int offsetHeight) {
                 int top = getWidget().getAbsoluteTop() + getWidget().getOffsetHeight() + CONFIRM_PANEL_OFFSET;
-                int left = getWidget().getAbsoluteLeft() + getWidget().getOffsetWidth() / 2 - offsetWidth / 2;
+                int left = Math.max(0,
+                        getWidget().getAbsoluteLeft() + getWidget().getOffsetWidth() / 2 - offsetWidth / 2);
                 overlay.setPopupPosition(left, top);
             }
         });
@@ -129,7 +130,7 @@ public class ConfirmButtonConnector extends ButtonConnector {
     }
 
     @Override
-    public com.daniel_sc.confirm_button.client.ConfirmButton getWidget() {
-        return (com.daniel_sc.confirm_button.client.ConfirmButton) super.getWidget();
+    public VButton getWidget() {
+        return (VButton) super.getWidget();
     }
 }

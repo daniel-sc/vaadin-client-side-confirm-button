@@ -1,13 +1,26 @@
 # client-side-confirm-button
 
-Provides a button that shows a client side confirmation overlay 
-to have the user confirm the button click without any server interaction.
+Provides a button that shows a client side confirmation overlay to have the user confirm the button click without any server interaction. Confirm texts/icons can be customized.
+
+This button can be used as substitute for original `com.vaadin.ui.Button`.
 
 ## Usage
 
 ```java
 Button button = new ConfirmButton("Save to click");
 button.addClickListener(e -> System.out.println("Button was clicked and confirmed by user"));
+```
+
+You can customize texts and icons:
+
+```
+ConfirmButton button = new ConfirmButton("Save to click");
+
+button.setCancelButtonIcon(FontAwesome.TIMES);
+button.setConfirmButtonIcon(FontAwesome.CHECK_CIRCLE);
+button.setConfirmQuestion("Are you really sure?");
+button.setConfirmText("I am sure!");
+button.setCancelText("I am not really sure..");
 ```
 
 ## Development instructions 
