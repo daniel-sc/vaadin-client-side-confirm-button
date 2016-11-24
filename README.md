@@ -13,7 +13,7 @@ button.addClickListener(e -> System.out.println("Button was clicked and confirme
 
 You can customize texts and icons:
 
-```
+```java
 ConfirmButton button = new ConfirmButton("Save to click");
 
 button.setCancelButtonIcon(FontAwesome.TIMES);
